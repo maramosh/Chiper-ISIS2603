@@ -1,0 +1,44 @@
+{% extends 'base.html' %} 
+{% block content %} 
+<div class="container">
+    <div class="row">
+    <div class="col-12">
+<div class="card">
+    <div class="card-header">
+    Update pedido
+  </div>
+
+
+
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Valor</th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for variable in pedidos_list %}
+    <tr>
+      <th scope="row">{{variable.pk}}</th>
+      <td>{{variable.estado}}</td>
+      <td>{{variable.valor}}</td>
+        <td><a href="/pedido/update/{{variable.pk}}" class="btn btn-success">Actualizar estado</a></td>
+
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+</div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}

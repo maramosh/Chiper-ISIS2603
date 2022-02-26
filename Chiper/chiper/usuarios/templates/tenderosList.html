@@ -1,0 +1,48 @@
+{% extends 'base.html' %} 
+{% block content %} 
+<div class="container">
+    <div class="row">
+    <div class="col-12">
+<div class="card">
+    <div class="card-header">
+    Tenderos
+  </div>
+
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Id</th>
+      <th scope="col">Celular</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Email</th>
+      <th scope="col">RUT</th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for variable in tenderos_list %}
+    <tr>
+      <th scope="row">{{variable.pk}}</th>
+      <td>{{variable.nombre}}</td>
+      <td>{{variable.identificacionr}}</td>
+      <td>{{variable.numeroCelular}}</td>
+      <td>{{variable.email}}</td>
+      <td>{{variable.RUT}}</td>
+
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+</div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}
